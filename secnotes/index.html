@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security News - Portal Berita Keamanan Siber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🛡️ CyberSecure News</div>
+                <nav>
+                    <span style="font-size: 1rem;">Portal Berita Keamanan Siber Indonesia</span>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="container">
+            <h2 style="margin-bottom: 1rem; color: #333;">Cari Artikel Cyber Security</h2>
+            <form class="search-form" onsubmit="performSearch(event)">
+                <div class="search-box">
+                    <input type="text" 
+                           class="search-input" 
+                           id="searchInput"
+                           placeholder="Cari topik seperti: malware, phishing, ransomware..."
+                           required>
+                    <button type="submit" class="search-btn">🔍 Cari</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title" id="pageTitle">Artikel Terbaru Cyber Security</h1>
+            
+            <div class="articles-grid" id="articlesContainer">
+                <!-- Articles will be loaded here by JavaScript -->
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <h3>Tidak ada hasil ditemukan</h3>
+                <p>Coba gunakan kata kunci lain seperti "malware", "phishing", atau "security"</p>
+            </div>
+
+            <!-- Article Detail Modal -->
+            <div id="articleModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close-btn" onclick="closeModal()">&times;</button>
+                    </div>
+                    <div id="articleDetail">
+                        <!-- Article detail will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CyberSecure News. Portal edukasi keamanan siber untuk semua.</p>
+        </div>
+    </footer>
+
+    <script src="articles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
